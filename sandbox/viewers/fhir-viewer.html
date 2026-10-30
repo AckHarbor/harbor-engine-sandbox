@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; worker-src blob:; frame-src 'none'; object-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AckHarbor Chart™: Free JSON Viewer for FHIR® R4 Resources</title>
+<meta name="description" content="Free online JSON viewer that explains FHIR® R4 resources: browse every element, read plain-English notes and validation tips. Use test data only.">
+
+
+<link rel="stylesheet" href="viewer.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head><body><div class="nozip" style="font:16px/1.5 Arial,sans-serif;background:#FFF4E5;border:2px solid #F26B1D;padding:14px 16px;margin:12px"><b>This page looks broken because it was opened from inside the zip file.</b><br>Close it. In your Downloads folder, right-click <b>harbor-engine-sandbox.zip</b>, choose <b>Extract All…</b>, then <b>Extract</b>. In the new folder, open <b>harbor-engine-sandbox</b> and double-click <b>START-HERE</b>.</div>
+<header class="sitehdr"><a class="logo" href="https://ackharbor.com/"><img src="ackharbor-mark.svg" alt="" width="28" height="28"><span>AckHarbor™ Academy</span></a>
+<nav aria-label="Offline viewers"><a href="hl7-viewer.html" title="AckHarbor Spyglass: HL7 v2 message viewer">Spyglass (HL7 v2)</a><a href="fhir-viewer.html" title="AckHarbor Chart: FHIR JSON viewer">Chart (FHIR)</a><a href="../index.html">Sandbox</a></nav></header>
+<div class="wrap">
+<div class="main">
+  <h1>AckHarbor Chart™<span class="dsc">A free JSON viewer that explains FHIR® R4 resources</span></h1>
+  <p class="sub">Paste any FHIR R4 resource or Bundle as JSON, browse the element tree, click for Insights.</p>
+  <div class="phi" role="note"><b>Runs fully offline.</b> Nothing is uploaded or sent anywhere. <b>No real patient data. Do not load PHI.</b> Use test or de-identified messages only.</div>
+  <textarea id="in" rows="12" spellcheck="false" aria-label="FHIR JSON">{
+  "resourceType": "Patient",
+  "id": "pmc-sample",
+  "identifier": [{ "system": "https://fhir.penford.example/mrn", "value": "10028471" }],
+  "name": [{ "use": "official", "family": "Chen", "given": ["Maya", "Lin"] }],
+  "gender": "female",
+  "birthDate": "1988-03-14"
+}</textarea>
+  <div class="rbar">
+    <button class="btn pri" id="go">Parse</button>
+    <label class="sr" for="samp">Sample</label><select id="samp" aria-label="Sample resource"></select>
+    <a class="btn" href="https://ackharbor.com/errors/">OperationOutcome codes</a>
+    <a class="btn" href="https://ackharbor.com/glossary/#patient">Patient glossary</a>
+  </div>
+  <div id="alerts" class="alerts"></div>
+  <div id="tree" class="tree"></div>
+</div>
+<aside class="side" id="insight" aria-live="polite"></aside>
+</div>
+<footer class="foot">HL7® and FHIR® are registered trademarks of Health Level Seven International; this tool is not affiliated with or endorsed by HL7 International. Insights cite <a href="https://hl7.org/fhir/R4/" target="_blank" rel="noopener">FHIR R4</a>. <a href="https://ackharbor.com/insights/">Insights blog</a> · <a href="https://ackharbor.com/download">Sandbox</a></footer>
+<script src="viewer-common.js"></script>
+<script src="fhir-insights.js"></script>
+<script src="fhir-generic.js"></script>
+<script src="fhir-viewer-page1.js"></script>
+</body></html>

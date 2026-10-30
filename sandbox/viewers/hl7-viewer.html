@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; worker-src blob:; frame-src 'none'; object-src 'none'; media-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AckHarbor Spyglass™: Free Viewer for HL7® v2 Messages</title>
+<meta name="description" content="Free online viewer that explains every segment and field of an HL7® v2 message, with code-table meanings and validation tips. Use test data only.">
+
+
+<link rel="stylesheet" href="viewer.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head><body><div class="nozip" style="font:16px/1.5 Arial,sans-serif;background:#FFF4E5;border:2px solid #F26B1D;padding:14px 16px;margin:12px"><b>This page looks broken because it was opened from inside the zip file.</b><br>Close it. In your Downloads folder, right-click <b>harbor-engine-sandbox.zip</b>, choose <b>Extract All…</b>, then <b>Extract</b>. In the new folder, open <b>harbor-engine-sandbox</b> and double-click <b>START-HERE</b>.</div>
+<header class="sitehdr"><a class="logo" href="https://ackharbor.com/"><img src="ackharbor-mark.svg" alt="" width="28" height="28"><span>AckHarbor™ Academy</span></a>
+<nav aria-label="Offline viewers"><a href="hl7-viewer.html" title="AckHarbor Spyglass: HL7 v2 message viewer">Spyglass (HL7 v2)</a><a href="fhir-viewer.html" title="AckHarbor Chart: FHIR JSON viewer">Chart (FHIR)</a><a href="../index.html">Sandbox</a></nav></header>
+<div class="wrap">
+<div class="main">
+  <h1 id="vh"><span id="vhN">AckHarbor Spyglass™</span><span class="dsc" id="vhD">A free viewer that explains every segment and field of an HL7® v2 message</span></h1>
+  <div class="modesw" role="tablist" aria-label="Viewer mode"><button role="tab" id="mOne" class="on" aria-selected="true">One message</button><button role="tab" id="mBatch" aria-selected="false">Batch file</button></div>
+  <p class="sub" id="vhS">Paste any HL7 v2 message, browse the segment and field tree, click for Insights. Batch file mode is AckHarbor Manifest™, the free batch analyzer for files of HL7 v2 messages.</p>
+  <div class="phi" role="note"><b>Runs fully offline.</b> Nothing is uploaded or sent anywhere. <b>No real patient data. Do not load PHI.</b> Use test or de-identified messages only.</div>
+  <div id="one">
+  <textarea id="in" rows="12" spellcheck="false" aria-label="HL7 message"></textarea>
+  <div class="rbar">
+    <button class="btn pri" id="go">Parse</button>
+    <label class="sr" for="samp">Sample</label><select id="samp" aria-label="Sample message"></select>
+    <a class="btn" href="https://ackharbor.com/reference/#pid">PID reference</a>
+    <a class="btn" href="https://ackharbor.com/errors/">Error lookup</a>
+  </div>
+  <div id="alerts" class="alerts"></div>
+  <div id="tree" class="tree"></div>
+  </div>
+  <div id="batch" hidden></div>
+</div>
+<aside class="side" id="insight" aria-live="polite"></aside>
+</div>
+<footer class="foot">HL7® is a registered trademark of Health Level Seven International; AckHarbor Spyglass™ and AckHarbor Manifest™ are not affiliated with or endorsed by HL7 International. Insights are original training notes citing <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=144" target="_blank" rel="noopener">HL7 v2.5.1</a>. <a href="https://ackharbor.com/insights/">Insights blog</a> · <a href="https://ackharbor.com/download">Sandbox</a></footer>
+<script src="csp-events.js"></script><script src="../engine.js"></script>
+<script src="viewer-common.js"></script>
+<script src="hl7-insights.js"></script>
+<script src="hl7-generic.js"></script>
+<script src="hl7-batch-core.js"></script>
+<script src="hl7-batch.js"></script>
+<script src="hl7-batch-sample.js"></script>
+<script src="hl7-deid.js"></script>
+<script src="hl7-viewer-page1.js"></script>
+</body></html>
