@@ -34,3 +34,5 @@ No build step and no dependencies. Nothing is sent over the network.
 [PolyForm Noncommercial 1.0.0](LICENSE). Copyright © 2026 DaRider Tech LLC. Free for learning, teaching and other noncommercial use. Commercial use, resale or hosting it as a service needs written permission from DaRider Tech LLC (support@ackharbor.com).
 
 HL7® and FHIR® are registered trademarks of Health Level Seven International; use does not imply endorsement.
+
+More free tools and training at [ackharbor.com](https://ackharbor.com).
